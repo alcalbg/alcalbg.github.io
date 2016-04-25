@@ -1,56 +1,96 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
-    <title>alcalbg – web developer</title>
-    <meta name="description" content="PHP Web Developer">
-    <meta name="author" content="alcalbg">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
-</head>
-
-<body>
-    <div class="page">
-        <header role="banner">
-            <figure class="headshot">
-		<img src="http://www.gravatar.com/userimage/23511975/684a2c3b7ba4492c718be2cec118f4bb.png?size=200" rel="alcalbg" />
-            </figure>
-            <hgroup>
-                <h1 id="page_title">Alcalbg - Web Developer</h1>
-                <ul>
-                    <li>CEO/Owner at <a href="http://interactive32.com" rel="external">interactive32.com</a></li>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>alcalbg &raquo; Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700"
+    rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+          <div class="col-md-3 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="row">
+              <div class="col-md-8">
+                <img src="http://www.gravatar.com/userimage/23511975/684a2c3b7ba4492c718be2cec118f4bb.png?size=100" class="img-responsive visible-md visible-lg"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-sm hidden-xs">
+                <h1><strong>alcalbg</strong></h1>
+                <h4>Web Developer at <a rel="external" href="http://interactive32.com">interactive32.com</a></h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+		<ul class="nav">
+		    <li>Recent Projects</li>
+                    <li><a rel="external" href="http://www.ducksell.com/">DuckSell - Sell your digital products and deliver them securely</a></li>
+                    <li><a rel="external" href="http://www.file-gator.com/">FileGator - Advanced Multi-User PHP File Manager</a></li>
+                    <li><a rel="external" href="http://www.timecase.net/">TimeCase - Time Tracking Web App (PHP)</a></li>
+                    <li><a rel="external" href="http://www.socialstrap.net">SocialStrap - Social Networking PHP Platform</a></li>
                 </ul>
-            </hgroup>
-        </header>
-        <section class="primary" role="main">
-            <section id="networks">
-                <h2>Projects:</h2>
-                <ul>
-                    <li><a href="http://www.ducksell.com/" rel="external">DuckSell - Sell your digital products and deliver them securely</a></li>
-                    <li><a href="http://www.file-gator.com/" rel="external">FileGator - Advanced Multi-User PHP File Manager</a></li>
-                    <li><a href="http://www.timecase.net/" rel="external">TimeCase - Time Tracking Web App (PHP)</a></li>
-                    <li><a href="http://www.socialstrap.net" rel="external">SocialStrap - Social Networking PHP Platform</a></li>
-                </ul>
-            </section>
-            <section id="contact">
-                <h2>Contact:</h2>
-                <p class="email">alcalbg [at] gmail [dot] com</p>
-            </section>
-        </section>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-md-offset-0 col-sm-9">
+            <div class="row">
+              <div class="col-xs-6 visible-sm visible-xs">
+                <h1><strong>alcalbg</strong></h1>
+                <h4>Web Developer at <a rel="external" href="http://interactive32.com">interactive32.com</a></h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="pull-links visible-xs visible-sm">
+                  <button type="button" class="btn btn-primary btn-xs " data-toggle="offcanvas">
+                    Links<span class="glyphicon glyphicon-chevron-right pull"></span>
+                  </button>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="lead">
+                  I'm a web developer and I build websites and web apps.
+                </p>
+                <p>
+                  I'm a web developer and Kentucky ex-pat currently residing in the Bay Area. I typically focus on Ruby on Rails
+                  with a healthy amount of JavaScript thrown in. 
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h4>Recent Projects</h4>
+                <dl>
+                  <dt><a href="http://www.ducksell.com/">DuckSell </a></dt>
+                  <dd>Sell your digital products and deliver them securely</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-muted text-center" id="footer">
+      <div class="container">
         <footer class="page-footer">
             <p class="copyright"> 2008 -
                 <script type="text/javascript">
-                //<![CDATA[
+                //&lt;![CDATA[
                 document.write(new Date().getFullYear());
-                //]]>
+                //]]&gt;
                 </script> interactive32.com</p>
         </footer>
+      </div>
     </div>
-    <!--! end of .page -->
-</body>
-
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
 
