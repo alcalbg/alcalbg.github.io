@@ -1,279 +1,90 @@
+/*
+Colors:
 
-@charset "UTF-8";
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-    display: block;
+Light blue: #1887FF;
+
+*/
+
+html,body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
-audio, canvas, video {
-    display: inline-block;
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -100px;
+  /* Pad bottom by footer height */
+  padding: 0 0 100px;
 }
-audio:not([controls]) {
-    display: none;
-    height: 0;
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 100px;
+  background-color: #f5f5f5;
 }
-[hidden], template {
-    display: none;
+
+h1,span{
+  font-weight: 100;
 }
-html {
-    font-family: sans-serif;
+
+@media screen and (min-width: 768px) {
+  #wrap{
+    padding-top: 55px;
+  }
 }
-body {
-    margin: 0;
+
+@media screen and (max-width: 768px) {
+  #wrap{
+    padding-top: 5px;
+  }
 }
-a {
-    background: transparent none repeat scroll 0 0;
+
+.lead{
+  font-weight: 300;
 }
-a:focus {
-    outline: thin dotted;
-}
-a:active, a:hover {
-    outline: 0 none;
-}
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-abbr[title] {
-    border-bottom: 1px dotted;
-}
-b, strong {
-    font-weight: bold;
-}
-dfn {
-    font-style: italic;
-}
-hr {
-    box-sizing: content-box;
-    height: 0;
-}
-mark {
-    background: #ff0 none repeat scroll 0 0;
-    color: #000;
-}
-code, kbd, pre, samp {
-    font-family: monospace,serif;
-    font-size: 1em;
-}
-pre {
-    white-space: pre-wrap;
-}
-q {
-    quotes: "“" "”" "‘" "’";
-}
-small {
-    font-size: 80%;
-}
-sub, sup {
-    font-size: 75%;
-    line-height: 0;
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 992px) {
+  .row-offcanvas {
     position: relative;
-    vertical-align: baseline;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
 }
-sup {
-    top: -0.5em;
-}
-sub {
-    bottom: -0.25em;
-}
-img {
-    border: 0 none;
-}
-svg:not(:root) {
-    overflow: hidden;
-}
-figure {
-    margin: 0;
-}
-fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-}
-legend {
-    border: 0 none;
-    padding: 0;
-}
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0;
-}
-button, input {
-    line-height: normal;
-}
-button, select {
-    text-transform: none;
-}
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    cursor: pointer;
-}
-button[disabled], html input[disabled] {
-    cursor: default;
-}
-input[type="checkbox"], input[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-}
-input[type="search"] {
-    box-sizing: content-box;
-}
-button::-moz-focus-inner, input::-moz-focus-inner {
-    border: 0 none;
-    padding: 0;
-}
-textarea {
-    overflow: auto;
-    vertical-align: top;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-* {
-    box-sizing: border-box;
-}
-body {
-    background-color: #263f5e;
-    color: #fff;
-}
-body {
-    font-family: Georgia,serif;
-}
-h1, h2, h3, h4, h5, h6, p, li {
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.8;
-}
-a {
-    color: #4c9eff;
-    text-decoration: none;
-}
-a:visited {
-    color: #4c9eff;
-}
-a:hover {
-    color: #000;
-}
-a:focus {
-    color: #000;
-}
-a:active {
-    color: #000;
-}
-a:hover {
-    text-decoration: none;
-}
-blockquote {
-    font-style: oblique;
-    margin: 1em 0.5em;
-}
-blockquote p::before {
-    content: "“ ";
-}
-blockquote p::after {
-    content: " ”";
-}
-blockquote footer > p {
-    text-align: right;
-}
-blockquote footer > p::before {
-    content: "– ";
-}
-ul {
-    list-style-type: none;
-    margin-left: 0;
-    margin-top: 0;
-    padding-left: 0;
-}
-header[role="banner"] ul li {
-    margin-bottom: 0.75em;
-}
-header[role="banner"] ul li::before {
-    content: "> ";
-}
-label {
-    display: inline-block;
-    margin-top: 1em;
-}
-input[type="text"], input[type="password"], input[type="search"], input[type="tel"], input[type="email"], textarea {
-    padding: 0.25em;
-    width: 98%;
-}
-select, input[type="checkbox"], input[type="radio"] {
-    display: inline-block;
-}
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-    clear: both;
-    margin: 1em 0;
-}
-.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
-    background: #ccc none repeat scroll 0 0;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.8);
-    padding: 0.5em 1em;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-.boxshadow .button, .boxshadow button, .boxshadow input[type="button"], .boxshadow input[type="reset"], .boxshadow input[type="submit"] {
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 15px 17px rgba(255, 255, 255, 0.5) inset, 0 -5px 12px rgba(0, 0, 0, 0.05) inset;
-}
-.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-    border-color: #cccccc #bbbbbb #aaaaaa;
-}
-.boxshadow .button:hover, .boxshadow button:hover, .boxshadow input[type="button"]:hover, .boxshadow input[type="reset"]:hover, .boxshadow input[type="submit"]:hover {
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 15px 17px rgba(255, 255, 255, 0.8) inset, 0 -5px 12px rgba(0, 0, 0, 0.02) inset;
-}
-.button:focus, .button:active, button:focus, button:active, input[type="button"]:focus, input[type="button"]:active, input[type="reset"]:focus, input[type="reset"]:active, input[type="submit"]:focus, input[type="submit"]:active {
-    border-color: #aaaaaa #bbbbbb #bbbbbb;
-}
-.boxshadow .button:focus, .boxshadow .button:active, .boxshadow button:focus, .boxshadow button:active, .boxshadow input[type="button"]:focus, .boxshadow input[type="button"]:active, .boxshadow input[type="reset"]:focus, .boxshadow input[type="reset"]:active, .boxshadow input[type="submit"]:focus, .boxshadow input[type="submit"]:active {
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(0, 0, 0, 0.15) inset;
-}
-div.page {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.25em;
-    max-width: 66.25em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
-}
-div.page::after {
-    clear: both;
-    content: "";
-    display: table;
-}
-header[role="banner"] {
-    clear: both;
-}
-header[role="banner"] h2 {
-    margin: 0;
-}
-header[role="banner"] figure.headshot img {
-    opacity: 0.25;
-}
-header[role="banner"] figure.headshot img:hover {
-    opacity: 1;
-}
-.csstransitions header[role="banner"] figure.headshot img {
-    transition-duration: 2s;
-    transition-property: opacity;
-}
-.borderradius header[role="banner"] figure.headshot img {
-    border-radius: 50px;
-}
-section > h2 {
-    margin-bottom: 0;
-}
-section > p {
-    margin-top: 0;
-}
-section.primary {
-    word-wrap: break-word;
-}
-footer.page-footer {
-    clear: both;
-}
-footer.page-footer p {
-    color: #0f2033;
-    font-size: 0.75rem;
+
+.pull-links{
+  display: inline-block;
 }
 
